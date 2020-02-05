@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listAPIs">
+        <item>Google Nearby</item>
+        <item>WiFiP2P</item>
+    </string-array>
+    <string-array name="listValues">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <string-array name="lineOfSight">
+        <item>LoS</item>
+        <item>No LoS</item>
+    </string-array>
+    <string-array name="listTopologies">
+        <item>Star</item>
+        <item>Cluster</item>
+        <item>1-to-1</item>
+    </string-array>
+</resources>

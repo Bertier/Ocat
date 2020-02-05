@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListPreference
+        android:key="APIList"
+        android:title="D2D API"
+        android:summary="Select the preferred API to exchange data between the two devices."
+        android:entries="@array/listAPIs"
+        android:entryValues="@array/listValues" />
+    <EditTextPreference
+        android:defaultValue="phone"
+        android:key="namePhone"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:summary="Custom device name, mainly useful to differenciate devices in log analysis."
+        android:title="Device Name" />
+
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="reuse"
+        android:summary="Allow the app to re-use a previously generated file for upcoming loops. If false, each loop will have its unique generated file (be careful if numerous loops)."
+        android:title="Allow file re-usage" />
+    <PreferenceCategory android:title="Nearby">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="reconnect"
+            android:summary="In case of disconnection during a benchmark, automatically start looking for devices to resume it. Both receiver/sender must turn the option on for it to work."
+            android:title="Automatic re-connection" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Nearby - Topology">
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/listTopologies"
+            android:entryValues="@array/listTopologies"
+            android:key="list_topologies"
+            android:title="Topology - Click here to chose"/>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="advertiserMode"
+            android:summary="If enabled, this device will be the sole emitter of data in the topology, otherwise it will be a client."
+            android:title="Sender - Only for star" />
+    </PreferenceCategory>
+</PreferenceScreen>
